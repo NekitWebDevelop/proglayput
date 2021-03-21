@@ -52,22 +52,22 @@ section{
 
 /********Главный экран********/
 
-header{
+.header{
 	padding: 43px 0 80px 0;
 	color: #fff;
 	background-image: url(https://img.fonwall.ru/o/b6/domik-na-vode-palmi.jpg);
-        background-size: cover;
+    background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+    
 }
 
 .logo{
-	width: 144px;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 16px;;
 	letter-spacing: 0.055em;
-	background-image: url(D:/Phototour/img/logo.png);
+	background-image: url(.../img/logo.png);
 	background-repeat: no-repeat;
 	background-position: left;
 	padding-left: 37px;
@@ -75,15 +75,16 @@ header{
 	margin-right: 110px;
 }
 
-.nav li{
-	margin-right: 48px;
-}
-
 .nav{
 	display: flex;
 }
 
+.nav li:not(last-child){
+    margin-right: 48px;
+}
+
 .nav a{
+    border-bottom: 1px solid transparent;
 	padding-bottom: 10px;
 }
 
@@ -92,9 +93,20 @@ header{
 }
 
 .navigation{
+    
 	margin: 0 0 193px 0;
 	align-items: center;
 	display: flex;
+}
+
+.country span{
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+}
+
+.country{
+    font-size: 12px;
 }
 
 .call{
@@ -188,7 +200,7 @@ header{
 /*******Направления*******/
 
 .destinations{
-	margin-top: 47px;
+    margin: 47px 0 58px 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -199,30 +211,28 @@ header{
 }
 
 .destinations-item{
+    cursor: pointer;
 	display: flex;
 	flex-wrap: wrap;
 	margin-bottom: 31px;
 	width: 585px;
-	height: 173px;
 	box-shadow: 0px 17px 50px rgba(32, 40, 69, 0.14);
     border-radius: 15px;
 }
 
 .destinations-item img {
 	width: 277px;
-	height: 173px;
 	display: block;
 	border-radius: 15px 0px 0px 15px;
 }
 
 .data{
-	padding: 35px 0 0 28px;
 	align-items: center;
 	display: flex;
 
 }
 
-.data span{
+.data span{ 
 	margin-left: 2px;
 	color: #fff;
 	font-size: 13px;
@@ -237,8 +247,12 @@ header{
 	font-size: 13px;
 }
 
+.detalies{
+     padding: 35px 21px 35px 28px;
+}
+
 .detalies-text{
-	margin: 16px 0 0 30px;
+	margin: 16px 0 0 0;
 }
 
 .detalies-text p{
@@ -248,7 +262,6 @@ header{
 }
 
 .btn-routes{
-	margin-top: 27px;
 	color: #FF7D34;
 	font-weight: 700;
 	border: 1px solid #FF7D34;
@@ -320,6 +333,7 @@ header{
 }
 
 .form-content{
+    justify-content: space-between;
 	align-items: center;
 	display: flex;
 }
@@ -335,15 +349,16 @@ header{
 	display: block;
 }
 
-.number h3{
+.number p{
+    font-weight: 700;
 	font-size: 20px;
-	margin-top: 23px;
+    color: #543024;
 }
 
 /*******Конец секции*******/
 
 .footer{
-	margin-top: 116px;
+	padding: 116px 0 119px;
 }
 
 .footer p{
