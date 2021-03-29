@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="img/favicon.png" type="image/png" rel="shortcut icon">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"> 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<meta charset="UTF-8">
@@ -24,13 +25,13 @@
 						<a href="#">Главная</a>
 					</li>
 					<li>
-						<a href="#">Куда поедем</a>
+						<a href="#routes" class="routes1">Куда поедем</a>
 					</li>
 					<li>
-						<a href="#">О нас</a>
+						<a href="#about" class="about1">О нас</a>
 					</li>
 					<li>
-						<a href="#">Контакты</a>
+						<a href="#contacts" class="contacts1">Контакты</a>
 					</li>
 				</ul>
 				
@@ -40,7 +41,7 @@
                  </div>
                  
 					<div class="call">
-						<a href="#" class="btn-call">Заказать звонок</a>
+						<a href="#" class="btn-call ">Заказать звонок</a>
 		                <a href="#" class="phone">+7 (495) 234-43-65</a>
 		            </div>
 		            <img src="img/Burger.png" alt="Menu">
@@ -52,7 +53,7 @@
            	<div class="text-offer">
            		<h1>Фотопутешествие мечты</h1>
            	 <p>Отправляйся с нами в путешествие, в котором будет все: эмоции, впечатления, люди и фотография. Все, что ты так любишь! Мы уже ждем тебя.</p>
-           	 <a href="#" class="btn">Мне нужно это</a> 
+           	 <a href="#contacts" class="btn">Мне нужно это</a> 
            	</div>
            	<a href="#" class="button-arrow">
            		<div class="arrow"></div>
@@ -64,7 +65,7 @@
 	<!------------ Конец главного экрана ------------>
 
     <!-------------- Направления -------------->
-	<section class="routes">
+	<section class="routes" id="routes">
 		<div class="container">
 			<h2>Куда поедем</h2>
 			<ul class="destinations">
@@ -135,7 +136,7 @@
 	<!-------------- Направления конец -------------->
 
     <!-------------- О нас -------------->
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<h2>О нас</h2>
 			<div class="content">
@@ -155,7 +156,7 @@
 	<!-------------- О нас конец -------------->
 
     <!-------------- Форма -------------->
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="container">
 			<h2>Контакты</h2>
 			<div class="form-content">
@@ -174,11 +175,26 @@
 		</div>
 	</section>
 	<!-------------- Форма конец -------------->
-
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/main.js"></script>
 	<footer class="footer">
 		<div class="container">
 			<p>2020 © Phototrip</p>
 		</div>
 	</footer>
+
+	<div id="modal_form">
+	  <h2>Заказать звонок</h2>
+	  <div class="comment">Оставьте Ваши данные и мы перезвоним Вам!</div>
+      <a class="exit"></a>
+	  <form method="post">
+        <input type="text" placeholder="Ваше имя" name="name-zv" id="name" class="input_text">
+        <input type="text" placeholder="Номер телефона *" name="phone-zv" id="phone-zv" class="phone-zv">
+		<div class="comment"> <span class="required">*</span></div>
+        <input class="btn" type="submit" value="Заказать звонок">
+    </form>
+</div>
+<div id="overlay"></div>
+
 </body>
 </html>
